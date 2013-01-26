@@ -43,3 +43,7 @@ Support?
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/v2px/fantasy-irc/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
