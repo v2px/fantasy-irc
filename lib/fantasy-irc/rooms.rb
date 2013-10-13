@@ -80,6 +80,16 @@ module Fantasy
                 self.say "\001ACTION #{message}\001"
             end
 
+            # sets a topic in the room
+            def topic message
+                if @joined == false then
+                    raise "Tried to set topic in a room (#{name}) we're not in."
+                end
+
+                @connection.send('TOPIC '+@name+' :'+message)
+                return self
+            end
+
             def to_s
                 "#{@name}"
             end
