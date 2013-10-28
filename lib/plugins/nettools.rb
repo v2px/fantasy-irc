@@ -31,7 +31,7 @@ plugin.handle(/^host$/i) do |data, args|
         next data[:room].say "host needs more arguments"
     end
 
-    if args[0].match(/^a-z0-9\.-/i)
+    if args[0].match(/[^a-z0-9\.-]/i)
         next data[:room].say "invalid characters in argument"
     end
 
