@@ -75,6 +75,16 @@ module Fantasy
                 return self
             end
 
+            # sends a notice to the room
+            def note message
+                if @joined == false then
+                    raise "Tried to talk to a room (#{name}) we're not in."
+                end
+
+                @connection.send('NOTICE '+@name+' :'+message)
+                return self
+            end
+
             # sends a privmsg with ACTION to the room
             def me message
                 self.say "\001ACTION #{message}\001"
