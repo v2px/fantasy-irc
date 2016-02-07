@@ -15,7 +15,7 @@ bot.events.by_name('connected').register &connected
 
 # join a room and say hi
 loggedin = Proc.new do
-    bot.rooms.new("#test").join.say "ohai"
+    bot.rooms.new("#test").join.note "ohai"
 end
 bot.events.by_name('loggedin').register &loggedin
 
