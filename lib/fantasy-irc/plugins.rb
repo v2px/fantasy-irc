@@ -67,7 +67,7 @@ class Plugin
     end
 
     def handle! command, data, args=[]
-        puts "trying to handle #{command} with #{data} and #{args}"
+        #puts "trying to handle #{command} with #{data} and #{args}"
         @handlers.each do |pattern, block|
             if command.match(pattern) then
                 puts "#{block} handles #{command}"
