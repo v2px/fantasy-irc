@@ -10,7 +10,7 @@ GEM
     diff-lcs (1.2.1)
     identifies_as (1.1.0)
     module-cluster (2.0.5)
-    rake (10.0.3)
+    rake (12.3.3)
     rspec (2.13.0)
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
@@ -26,6 +26,6 @@ PLATFORMS
 DEPENDENCIES
   array-unique (~> 1.1.1)
   ddate
-  rake (~> 10.0.3)
+  rake (>= 12.3.3)
   rspec (~> 2.13.0)
   rspec-mocks (~> 2.13.0)
