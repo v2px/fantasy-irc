@@ -51,10 +51,9 @@ module Fantasy
                     return
                 end
 
-                pp @callbacks
-                #@callbacks.each { |uuid, proc|
-                 #   proc.call(args)
-                #}
+                @callbacks.each { |uuid, proc|
+                    proc.call(*args)
+                }
             end
         end
     end

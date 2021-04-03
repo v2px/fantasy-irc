@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.files             = `git ls-files`.split("\n")
   s.name              = "fantasy-irc"
   s.require_paths     = ['lib']
-  s.version           = "0.2.5"
+  s.version           = "0.3.0"
 
   s.rubyforge_project = s.name
   s.add_runtime_dependency "array-unique", "~> 1.1.1"
