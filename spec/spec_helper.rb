@@ -1,1 +1,1 @@
-require 'fantasy-irc'
+require "fantasy-irc"
