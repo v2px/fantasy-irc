@@ -28,7 +28,7 @@ class HackerSays < Plugin
 private
 
     def get_quote
-        return JSON::load(open("http://hackersays.com/quote").read)
+        return JSON::load(URI::open("http://hackersays.com/quote").read)
     end
 end
 
