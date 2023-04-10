@@ -18,7 +18,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+See [example.rb](docs/example.rb) for a template script.
+
+See [PLUGINS.md](docs/PLUGINS.md) for an overview of available plugins.
 
 ## Getting support
 
@@ -41,8 +43,3 @@ Support?
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
-
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/v2px/fantasy-irc/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
