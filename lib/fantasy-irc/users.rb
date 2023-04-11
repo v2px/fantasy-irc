@@ -3,7 +3,8 @@ module Fantasy
     class Factory
       def initialize(connection)
         puts "Initializing new User::Factory #{self} with connection #{connection}"
-        @data, @data[:users] = Hash.new, Hash.new
+        @data = Hash.new
+        @data[:users] = Hash.new
         @connection = connection
       end
 
