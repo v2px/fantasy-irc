@@ -18,10 +18,10 @@ module Fantasy
         file = "#{n}.rb"
         local_file = File.join(local, file)
         vendor_file = File.join(vendor, file)
-        if File.exists?(local_file)
+        if File.exist?(local_file)
           puts "[plugin] Loading #{file} (local)."
           Kernel.load local_file
-        elsif File::exists?(vendor_file)
+        elsif File.exist?(vendor_file)
           puts "[plugin] Loading #{file} (vendor)."
           Kernel.load vendor_file
         else
