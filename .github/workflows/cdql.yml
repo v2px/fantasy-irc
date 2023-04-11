@@ -1,0 +1,43 @@
+---
+name: CdQL
+
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
+
+jobs:
+  analyze:
+    name: Analyze
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+    steps:
+      - name: "Checkout repository"
+        uses: actions/checkout@v3
+      - name: "Initialize CodeQL"
+        uses: github/codeql-action/init@v2
+        with:
+          languages: ruby
+      - name: Autobuild
+        uses: github/codeql-action/autobuild@v2
+      - name: "Perform CodeQL Analysis"
+        uses: github/codeql-action/analyze@v2
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.0'
+          bundler-cache: true
+      - name: "Run rufo code formatting checks"
+        run: |
+          gem install rufo
+          rufo --check ./lib
+          rufo --check ./spec
+      - name: "Run yard documentation checks"
+        run: |
+          gem install yard
+          yard doc --fail-on-warning

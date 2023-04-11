@@ -12,5 +12,6 @@ Gem::Specification.new do |s|
   s.version = "0.3.0"
 
   s.rubyforge_project = s.name
-  s.add_runtime_dependency "array-unique", "~> 1.1.1"
+  s.add_runtime_dependency "array-unique", "~> 1.1"
+  s.add_runtime_dependency "ddate", "~> 1.0"
 end
